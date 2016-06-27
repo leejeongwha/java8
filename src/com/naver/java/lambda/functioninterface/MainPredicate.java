@@ -1,6 +1,7 @@
 package com.naver.java.lambda.functioninterface;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -11,18 +12,13 @@ public class MainPredicate {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		List<String> listOfStrings = new ArrayList<String>();
-		listOfStrings.add("1");
-		listOfStrings.add("2");
-		listOfStrings.add("3");
-		listOfStrings.add("");
-		listOfStrings.add("5");
+		List<String> listOfStrings = Arrays.asList("1", "2", "3", "", "5");
 
 		Predicate<String> nonEmptyStringPredicate = (String s) -> !s.isEmpty();
 
-		List<String> nonEmpty = filter(listOfStrings, nonEmptyStringPredicate);
+		List<String> nonEmptyStrings = filter(listOfStrings, nonEmptyStringPredicate);
 
-		for (String target : nonEmpty) {
+		for (String target : nonEmptyStrings) {
 			System.out.println(target);
 		}
 	}

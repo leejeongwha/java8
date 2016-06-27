@@ -1,7 +1,6 @@
 package com.naver.java.parameterization;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Predicate;
@@ -24,6 +23,7 @@ public class MainFilter {
 
 		// 3. 매번 클래스를 생성할 수는 없으니 익명클래스로 해결하자
 		List<Apple> bigApples2 = filterApples(inventory, new ApplePredicate() {
+			@Override
 			public boolean test(Apple apple) {
 				return apple.getWeight() > 800;
 			}
@@ -35,9 +35,8 @@ public class MainFilter {
 		// print(bigApples3);
 
 		// 5. 추상화 하여 개선하자
-		Integer[] numbers = { 0, 1, 2, 3, 4, 5, 6 };
-		List<Integer> evenNumbers = filter(Arrays.asList(numbers), (Integer i) -> i % 2 == 0);
-		print(evenNumbers);
+		List<Apple> bigApples4 = filter(inventory, (Apple apple) -> apple.getWeight() > 800);
+		print(bigApples4);
 	}
 
 	/**

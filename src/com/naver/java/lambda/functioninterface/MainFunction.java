@@ -19,7 +19,7 @@ public class MainFunction {
 		lengthList.forEach(item -> System.out.println(item));
 
 		// method reference
-		lengthList.stream().forEach(System.out::println);
+		lengthList.forEach(System.out::println);
 	}
 
 	public static <T, R> List<R> map(List<T> list, Function<T, R> f) {
