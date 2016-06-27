@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Main3MethodReference {
+public class Main3wayMethodRef {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
