@@ -1,5 +1,10 @@
 package com.naver.java.crash.actor;
 
+import static akka.actor.SupervisorStrategy.escalate;
+import static akka.actor.SupervisorStrategy.restart;
+import static akka.actor.SupervisorStrategy.resume;
+import static akka.actor.SupervisorStrategy.stop;
+
 import com.naver.java.hierachy.actor.Ping2Actor;
 import com.naver.java.hierachy.actor.Ping3Actor;
 
@@ -11,6 +16,8 @@ import akka.actor.SupervisorStrategy.Directive;
 import akka.actor.UntypedActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
+import akka.japi.Function;
+import scala.concurrent.duration.Duration;
 
 /**
  * 자식 액터들을 감시하기 위한 전략을 선언하는 액터

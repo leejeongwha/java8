@@ -1,5 +1,7 @@
 package com.naver.java.agent;
 
+import com.naver.java.agent.actor.NonblockingActor;
+
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;

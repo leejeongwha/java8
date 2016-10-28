@@ -1,5 +1,7 @@
 package com.naver.java.router;
 
+import com.naver.java.router.actor.PingActor;
+
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;

@@ -1,6 +1,7 @@
 package com.naver.java.agent.actor;
 
 import akka.actor.UntypedActor;
+import akka.agent.Agent;
 import akka.dispatch.ExecutionContexts;
 import akka.dispatch.Mapper;
 import akka.event.Logging;
@@ -23,6 +24,7 @@ public class AgentActor extends UntypedActor {
 		Agent<Integer> agent = Agent.create(5, ec);
 
 		agent.send(new Mapper<Integer, Integer>() {
+			@Override
 			public Integer apply(Integer i) {
 				return i * 2;
 			}

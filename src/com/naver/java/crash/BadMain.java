@@ -1,5 +1,7 @@
 package com.naver.java.crash;
 
+import com.naver.java.crash.actor.PingActor;
+
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
